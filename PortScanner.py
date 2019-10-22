@@ -1,6 +1,6 @@
 import socket 
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)       #Making a socket. socket_AFINET = address family IP4. socket.SOCK_STREAM = TCP protocol
 server = 'http://scanme.nmap.org/'
 
 def portscan (port):
@@ -10,7 +10,7 @@ def portscan (port):
     except:
         return False
 
-for p in range (1,80):
+for p in range (1,99):
     if portscan(p):
         print('Port',p,'is open')
     else:
